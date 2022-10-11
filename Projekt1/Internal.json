@@ -23,8 +23,8 @@
           {
             "ƒ.ComponentMaterial": {
               "sortForAlpha": false,
-              "clrPrimary": "[1, 1, 1, 1]",
-              "clrSecondary": "[1, 1, 1, 1]",
+              "clrPrimary": "[0.8941176470588236, 0.34509803921568627, 0.34509803921568627, 1]",
+              "clrSecondary": "[0.7647058823529411, 1, 0.2196078431372549, 1]",
               "pivot": {
                 "translation": "[0, 0]",
                 "rotation": 0,
@@ -57,7 +57,7 @@
       "shader": "ShaderLit",
       "coat": {
         "ƒ.CoatColored": {
-          "color": "[0.5058823529411764, 0.7176470588235294, 0.9921568627450981, 1]"
+          "color": "[1, 1, 1, 1]"
         }
       }
     }
