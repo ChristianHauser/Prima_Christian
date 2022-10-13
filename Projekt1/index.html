@@ -20,9 +20,37 @@
 
 <!--Load custom scripts-->
 <script type="text/javascript" src="Script/Build/Script.js" editor="true"></script>
-
+<script src="Sprites.js"></script>
 <!--Load Autoview script-->
 <script type="text/javascript" src="Autoview.js"></script>
+<script>TestInstructions.display({
+    Name: "Sprite",
+    Test: [
+        "An animation generated from a sprite sheet."
+    ],
+    Setup: [
+        "1 NodeSprite from FUDGE Aid",
+        "1 sprite sheet",
+        "1 SpriteSheetAnimation for cutting the individual sprites of the animation"
+    ],
+    Act: [
+        "Set the frame rate of the animation"
+    ],
+    Observe: [
+        "See if the current frame matches the animation",
+        "Console to see the properties of the generated sprites",
+        "See in the console changed the frame rate"
+    ],
+    Control: [
+        "<strong>Number-Stepper</strong> Set the frame rate of the animation"
+    ],
+    Expect: [
+        "Each frame should be seen once per run. Frame 8 is the same as frame 0 and is not displayed",
+        "The current frame should match the one displayed",
+        "The frame rate adjusts how many pictures are shown per second"
+    ]
+});</script>
+
 
 </head>
 <body>
