@@ -116,19 +116,30 @@
             "name": "Mario",
             "idSource": "Graph|2022-10-11T14:55:48.726Z|87648"
           }
+        },
+        {
+          "ƒ.GraphInstance": {
+            "deserializeFromSource": true,
+            "name": "Floor",
+            "idSource": "Graph|2022-10-11T14:11:51.580Z|50126"
+          }
+        },
+        {
+          "ƒ.GraphInstance": {
+            "deserializeFromSource": true,
+            "name": "SpriteAnim",
+            "idSource": "Graph|2022-10-13T09:13:25.721Z|08289"
+          }
+        },
+        {
+          "ƒ.GraphInstance": {
+            "deserializeFromSource": true,
+            "name": "JUmpTest",
+            "idSource": "Graph|2022-10-13T09:21:59.562Z|68520"
+          }
         }
       ],
       "idResource": "Graph|2022-10-11T14:16:26.385Z|55369",
-      "type": "Graph"
-    }
-  },
-  "Graph|2022-10-11T14:41:29.099Z|46038": {
-    "ƒ.Graph": {
-      "name": "FloorPosition",
-      "active": true,
-      "components": {},
-      "children": [],
-      "idResource": "Graph|2022-10-11T14:41:29.099Z|46038",
       "type": "Graph"
     }
   },
@@ -256,6 +267,114 @@
       },
       "children": [],
       "idResource": "Graph|2022-10-11T14:55:48.726Z|87648",
+      "type": "Graph"
+    }
+  },
+  "MeshSprite|2022-10-13T09:13:43.522Z|23280": {
+    "ƒ.MeshSprite": {
+      "idResource": "MeshSprite|2022-10-13T09:13:43.522Z|23280",
+      "name": "MeshSprite",
+      "type": "MeshSprite"
+    }
+  },
+  "Material|2022-10-13T09:14:27.496Z|96646": {
+    "ƒ.Material": {
+      "name": "JUMP1",
+      "idResource": "Material|2022-10-13T09:14:27.496Z|96646",
+      "shader": "ShaderLitTextured",
+      "coat": {
+        "ƒ.CoatTextured": {
+          "color": "[1, 1, 1, 1]",
+          "idTexture": "TextureImage|2022-10-13T09:14:11.977Z|01945"
+        }
+      }
+    }
+  },
+  "TextureImage|2022-10-13T09:14:11.977Z|01945": {
+    "ƒ.TextureImage": {
+      "url": "Images\\MarioJump1.png",
+      "type": "TextureImage",
+      "Texture": {
+        "idResource": "TextureImage|2022-10-13T09:14:11.977Z|01945",
+        "name": "Images\\MarioJump1.png",
+        "mipmap": "CRISP"
+      }
+    }
+  },
+  "Graph|2022-10-13T09:13:25.721Z|08289": {
+    "ƒ.Graph": {
+      "name": "SpriteAnim",
+      "active": true,
+      "components": {
+        "ComponentMesh": [
+          {
+            "ƒ.ComponentMesh": {
+              "idMesh": "MeshSprite|2022-10-13T09:13:43.522Z|23280",
+              "pivot": {
+                "translation": "[0, 1, 0]",
+                "rotation": "[0, 0, 0]",
+                "scaling": "[1, 1, 1]"
+              },
+              "Component": {
+                "active": true
+              }
+            }
+          }
+        ],
+        "ComponentMaterial": [
+          {
+            "ƒ.ComponentMaterial": {
+              "sortForAlpha": false,
+              "clrPrimary": "[1, 1, 1, 1]",
+              "clrSecondary": "[1, 1, 1, 1]",
+              "pivot": {
+                "translation": "[0, 0]",
+                "rotation": 0,
+                "scaling": "[1, 1]"
+              },
+              "Component": {
+                "active": true
+              },
+              "idMaterial": "Material|2022-10-13T09:14:27.496Z|96646"
+            }
+          }
+        ]
+      },
+      "children": [],
+      "idResource": "Graph|2022-10-13T09:13:25.721Z|08289",
+      "type": "Graph"
+    }
+  },
+  "MeshSprite|2022-10-13T09:21:45.348Z|31491": {
+    "ƒ.MeshSprite": {
+      "idResource": "MeshSprite|2022-10-13T09:21:45.348Z|31491",
+      "name": "Spritetest",
+      "type": "MeshSprite"
+    }
+  },
+  "Graph|2022-10-13T09:21:59.562Z|68520": {
+    "ƒ.Graph": {
+      "name": "JUmpTest",
+      "active": true,
+      "components": {
+        "ComponentMesh": [
+          {
+            "ƒ.ComponentMesh": {
+              "idMesh": "MeshSprite|2022-10-13T09:21:45.348Z|31491",
+              "pivot": {
+                "translation": "[1, 1, 0]",
+                "rotation": "[0, 0, 0]",
+                "scaling": "[1, 1, 1]"
+              },
+              "Component": {
+                "active": true
+              }
+            }
+          }
+        ]
+      },
+      "children": [],
+      "idResource": "Graph|2022-10-13T09:21:59.562Z|68520",
       "type": "Graph"
     }
   }

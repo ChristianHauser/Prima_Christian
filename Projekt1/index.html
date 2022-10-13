@@ -23,6 +23,8 @@
 <script src="Sprites.js"></script>
 <!--Load Autoview script-->
 <script type="text/javascript" src="Autoview.js"></script>
+
+
 <script>TestInstructions.display({
     Name: "Sprite",
     Test: [
@@ -42,7 +44,7 @@
         "See in the console changed the frame rate"
     ],
     Control: [
-        "<strong>Number-Stepper</strong> Set the frame rate of the animation"
+        "&amp;lt;strong&amp;gt;Number-Stepper&amp;lt;/strong&amp;gt; Set the frame rate of the animation"
     ],
     Expect: [
         "Each frame should be seen once per run. Frame 8 is the same as frame 0 and is not displayed",
@@ -50,10 +52,18 @@
         "The frame rate adjusts how many pictures are shown per second"
     ]
 });</script>
-
-
 </head>
 <body>
+<form>
+    <fieldset id="framerate">
+        <legend>Animation</legend>
+        <input type="number" name="fps" min="1" max="60" value="5" /> framerate<br />
+        <input name="currentframe" disabled="" /> current frame<br />
+    </fieldset>
+</form>
+
+
+
 <!--Dialog shown at startup only-->
 <dialog>
 <p>FUDGE Autoview</p>
@@ -63,6 +73,8 @@
 <!--Canvas for FUDGE to render to-->
 <canvas class="fullscreen">
 </canvas>
+
+
 
 
 
