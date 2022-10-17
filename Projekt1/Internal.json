@@ -39,9 +39,9 @@
             "ƒ.ComponentMesh": {
               "idMesh": "MeshQuad|2022-10-11T14:10:23.855Z|18161",
               "pivot": {
-                "translation": "[2, 0, 0]",
+                "translation": "[0, 0, 0]",
                 "rotation": "[0, 0, 0]",
-                "scaling": "[1, 1, 1]"
+                "scaling": "[9, 1, 1]"
               },
               "Component": {
                 "active": true
@@ -58,7 +58,7 @@
               "pivot": {
                 "translation": "[0, 0]",
                 "rotation": 0,
-                "scaling": "[1, 1]"
+                "scaling": "[9, 1]"
               },
               "Component": {
                 "active": true
@@ -96,15 +96,146 @@
         {
           "ƒ.GraphInstance": {
             "deserializeFromSource": true,
-            "name": "SpriteAnim",
-            "idSource": "Graph|2022-10-13T09:13:25.721Z|08289"
+            "name": "JUmpTest",
+            "idSource": "Graph|2022-10-13T09:21:59.562Z|68520"
           }
         },
         {
-          "ƒ.GraphInstance": {
-            "deserializeFromSource": true,
-            "name": "JUmpTest",
-            "idSource": "Graph|2022-10-13T09:21:59.562Z|68520"
+          "ƒ.Node": {
+            "name": "MarioPosition",
+            "active": true,
+            "components": {
+              "ComponentMesh": [
+                {
+                  "ƒ.ComponentMesh": {
+                    "idMesh": "MeshQuad|2022-10-11T14:10:23.855Z|18161",
+                    "pivot": {
+                      "translation": "[0, 0, 0]",
+                      "rotation": "[0, 0, 0]",
+                      "scaling": "[1, 1, 1]"
+                    },
+                    "Component": {
+                      "active": true
+                    }
+                  }
+                }
+              ]
+            },
+            "children": [
+              {
+                "ƒ.GraphInstance": {
+                  "deserializeFromSource": true,
+                  "name": "SpriteAnim",
+                  "idSource": "Graph|2022-10-13T09:13:25.721Z|08289"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ƒ.Node": {
+            "name": "MarioPosition",
+            "active": true,
+            "components": {
+              "ComponentMesh": [
+                {
+                  "ƒ.ComponentMesh": {
+                    "idMesh": "MeshQuad|2022-10-11T14:10:23.855Z|18161",
+                    "pivot": {
+                      "translation": "[0, 0, 0]",
+                      "rotation": "[0, 0, 0]",
+                      "scaling": "[1, 1, 1]"
+                    },
+                    "Component": {
+                      "active": true
+                    }
+                  }
+                }
+              ]
+            },
+            "children": [
+              {
+                "ƒ.GraphInstance": {
+                  "deserializeFromSource": true,
+                  "name": "SpriteAnim",
+                  "idSource": "Graph|2022-10-13T09:13:25.721Z|08289"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ƒ.Node": {
+            "name": "MarioPosition",
+            "active": true,
+            "components": {
+              "ComponentMesh": [
+                {
+                  "ƒ.ComponentMesh": {
+                    "idMesh": "MeshQuad|2022-10-11T14:10:23.855Z|18161",
+                    "pivot": {
+                      "translation": "[0, 0, 0]",
+                      "rotation": "[0, 0, 0]",
+                      "scaling": "[1, 1, 1]"
+                    },
+                    "Component": {
+                      "active": true
+                    }
+                  }
+                }
+              ]
+            },
+            "children": [
+              {
+                "ƒ.GraphInstance": {
+                  "deserializeFromSource": true,
+                  "name": "SpriteAnim",
+                  "idSource": "Graph|2022-10-13T09:13:25.721Z|08289"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ƒ.Node": {
+            "name": "Hintergrund",
+            "active": true,
+            "components": {
+              "ComponentMesh": [
+                {
+                  "ƒ.ComponentMesh": {
+                    "idMesh": "MeshQuad|2022-10-11T14:10:23.855Z|18161",
+                    "pivot": {
+                      "translation": "[0, 0, 0]",
+                      "rotation": "[0, 0, 0]",
+                      "scaling": "[9, 9, 1]"
+                    },
+                    "Component": {
+                      "active": true
+                    }
+                  }
+                }
+              ],
+              "ComponentMaterial": [
+                {
+                  "ƒ.ComponentMaterial": {
+                    "sortForAlpha": false,
+                    "clrPrimary": "[0.2196078431372549, 0.9098039215686274, 1, 1]",
+                    "clrSecondary": "[1, 1, 1, 1]",
+                    "pivot": {
+                      "translation": "[0, 0]",
+                      "rotation": 0,
+                      "scaling": "[1, 1]"
+                    },
+                    "Component": {
+                      "active": true
+                    },
+                    "idMaterial": "Material|2022-10-17T13:28:59.042Z|41606"
+                  }
+                }
+              ]
+            },
+            "children": []
           }
         }
       ],
@@ -301,6 +432,18 @@
       "children": [],
       "idResource": "Graph|2022-10-13T09:21:59.562Z|68520",
       "type": "Graph"
+    }
+  },
+  "Material|2022-10-17T13:28:59.042Z|41606": {
+    "ƒ.Material": {
+      "name": "BlueBackground",
+      "idResource": "Material|2022-10-17T13:28:59.042Z|41606",
+      "shader": "ShaderLit",
+      "coat": {
+        "ƒ.CoatColored": {
+          "color": "[1, 1, 1, 1]"
+        }
+      }
     }
   }
 }
