@@ -1,28 +1,4 @@
 {
-  "Material|2022-10-06T13:28:26.523Z|75441": {
-    "ƒ.Material": {
-      "name": "ShaderLit",
-      "idResource": "Material|2022-10-06T13:28:26.523Z|75441",
-      "shader": "ShaderLit",
-      "coat": {
-        "ƒ.CoatColored": {
-          "color": "[1, 1, 1, 1]"
-        }
-      }
-    }
-  },
-  "Material|2022-10-11T14:05:35.158Z|24423": {
-    "ƒ.Material": {
-      "name": "Boden",
-      "idResource": "Material|2022-10-11T14:05:35.158Z|24423",
-      "shader": "ShaderLit",
-      "coat": {
-        "ƒ.CoatColored": {
-          "color": "[1, 1, 1, 1]"
-        }
-      }
-    }
-  },
   "MeshQuad|2022-10-11T14:10:23.855Z|18161": {
     "ƒ.MeshQuad": {
       "idResource": "MeshQuad|2022-10-11T14:10:23.855Z|18161",
@@ -108,13 +84,6 @@
             "deserializeFromSource": true,
             "name": "Dreieck",
             "idSource": "Graph|2022-10-11T14:46:16.716Z|67691"
-          }
-        },
-        {
-          "ƒ.GraphInstance": {
-            "deserializeFromSource": true,
-            "name": "Mario",
-            "idSource": "Graph|2022-10-11T14:55:48.726Z|87648"
           }
         },
         {
@@ -224,50 +193,6 @@
         "name": "Images\\IzzaMeMario.png",
         "mipmap": "CRISP"
       }
-    }
-  },
-  "Graph|2022-10-11T14:55:48.726Z|87648": {
-    "ƒ.Graph": {
-      "name": "Mario",
-      "active": true,
-      "components": {
-        "ComponentMesh": [
-          {
-            "ƒ.ComponentMesh": {
-              "idMesh": "MeshQuad|2022-10-11T14:10:23.855Z|18161",
-              "pivot": {
-                "translation": "[0, 0, 0]",
-                "rotation": "[0, 0, 0]",
-                "scaling": "[1, 1, 1]"
-              },
-              "Component": {
-                "active": true
-              }
-            }
-          }
-        ],
-        "ComponentMaterial": [
-          {
-            "ƒ.ComponentMaterial": {
-              "sortForAlpha": false,
-              "clrPrimary": "[1, 1, 1, 1]",
-              "clrSecondary": "[1, 1, 1, 1]",
-              "pivot": {
-                "translation": "[0, 0]",
-                "rotation": 0,
-                "scaling": "[1, 1]"
-              },
-              "Component": {
-                "active": true
-              },
-              "idMaterial": "Material|2022-10-11T14:48:36.914Z|97862"
-            }
-          }
-        ]
-      },
-      "children": [],
-      "idResource": "Graph|2022-10-11T14:55:48.726Z|87648",
-      "type": "Graph"
     }
   },
   "MeshSprite|2022-10-13T09:13:43.522Z|23280": {

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="styles.css" />
 
 <!--Editor settings of this project-->
-<meta type="settings" autoview="Graph|2022-10-11T14:16:26.385Z|55369" project="{'name':'Projekt1','graphAutoView':'Graph|2022-10-11T14:16:26.385Z|55369'}" panels="[{'type':'PanelProject','state':{}},{'type':'PanelGraph','state':{'graph':'Graph|2022-10-11T14:16:26.385Z|55369'}}]" />
+<meta type="settings" autoview="" project="{'name':'Projekt1','graphAutoView':''}" panels="[]" />
 
 <!--Activate the following line to include the FUDGE-version of Oimo-Physics. You may want to download a local copy to work offline and be independent from future changes!-->
 <!--<script type="text/javascript" src="https://jirkadelloro.github.io/FUDGE/Physics/OimoPhysics.js"></script>-->
@@ -15,55 +15,21 @@
 <script type="text/javascript" src="https://jirkadelloro.github.io/FUDGE/Core/Build/FudgeCore.js"></script>
 <script type="text/javascript" src="https://jirkadelloro.github.io/FUDGE/Aid/Build/FudgeAid.js"></script>
 
+<script src="../../Core/Build/FudgeCore.js"></script>
+<script src="../../Aid/Build/FudgeAid.js"></script>
+<script src="Sprites.js"></script>
+
 <!--Link internal resources. The editor only loads the first, but at runtime, multiple files can contribute-->
 <link type="resources" src="Internal.json" />
 
 <!--Load custom scripts-->
 <script type="text/javascript" src="Script/Build/Script.js" editor="true"></script>
-<script src="Sprites.js"></script>
+
 <!--Load Autoview script-->
 <script type="text/javascript" src="Autoview.js"></script>
 
-
-<script>TestInstructions.display({
-    Name: "Sprite",
-    Test: [
-        "An animation generated from a sprite sheet."
-    ],
-    Setup: [
-        "1 NodeSprite from FUDGE Aid",
-        "1 sprite sheet",
-        "1 SpriteSheetAnimation for cutting the individual sprites of the animation"
-    ],
-    Act: [
-        "Set the frame rate of the animation"
-    ],
-    Observe: [
-        "See if the current frame matches the animation",
-        "Console to see the properties of the generated sprites",
-        "See in the console changed the frame rate"
-    ],
-    Control: [
-        "&amp;lt;strong&amp;gt;Number-Stepper&amp;lt;/strong&amp;gt; Set the frame rate of the animation"
-    ],
-    Expect: [
-        "Each frame should be seen once per run. Frame 8 is the same as frame 0 and is not displayed",
-        "The current frame should match the one displayed",
-        "The frame rate adjusts how many pictures are shown per second"
-    ]
-});</script>
 </head>
 <body>
-<form>
-    <fieldset id="framerate">
-        <legend>Animation</legend>
-        <input type="number" name="fps" min="1" max="60" value="5" /> framerate<br />
-        <input name="currentframe" disabled="" /> current frame<br />
-    </fieldset>
-</form>
-
-
-
 <!--Dialog shown at startup only-->
 <dialog>
 <p>FUDGE Autoview</p>
@@ -72,13 +38,8 @@
 </dialog>
 <!--Canvas for FUDGE to render to-->
 <canvas class="fullscreen">
+
+
 </canvas>
-
-
-
-
-
-
-
 </body>
 </html>
