@@ -21,7 +21,7 @@
                         "ƒ.ComponentMesh": {
                           "idMesh": "MeshSprite|2022-10-17T14:10:12.371Z|56297",
                           "pivot": {
-                            "translation": "[0, 0, 0]",
+                            "translation": "[0, 0, 0.10000000149011612]",
                             "rotation": "[0, 0, 0]",
                             "scaling": "[1, 1, 1]"
                           },
@@ -54,6 +54,90 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "ƒ.Node": {
+            "name": "Background",
+            "active": true,
+            "components": {
+              "ComponentMesh": [
+                {
+                  "ƒ.ComponentMesh": {
+                    "idMesh": "MeshQuad|2022-10-17T14:12:54.150Z|59894",
+                    "pivot": {
+                      "translation": "[0, 0, 0]",
+                      "rotation": "[0, 0, 0]",
+                      "scaling": "[9, 9, 1]"
+                    },
+                    "Component": {
+                      "active": true
+                    }
+                  }
+                }
+              ],
+              "ComponentMaterial": [
+                {
+                  "ƒ.ComponentMaterial": {
+                    "sortForAlpha": false,
+                    "clrPrimary": "[0.4, 0.6588235294117647, 1, 1]",
+                    "clrSecondary": "[1, 1, 1, 1]",
+                    "pivot": {
+                      "translation": "[0, 0]",
+                      "rotation": 0,
+                      "scaling": "[1, 1]"
+                    },
+                    "Component": {
+                      "active": true
+                    },
+                    "idMaterial": "Material|2022-10-17T14:13:09.215Z|34608"
+                  }
+                }
+              ]
+            },
+            "children": []
+          }
+        },
+        {
+          "ƒ.Node": {
+            "name": "Boxen",
+            "active": true,
+            "components": {
+              "ComponentMesh": [
+                {
+                  "ƒ.ComponentMesh": {
+                    "idMesh": "MeshSprite|2022-10-17T14:10:12.371Z|56297",
+                    "pivot": {
+                      "translation": "[0, -4, 0.10000000149011612]",
+                      "rotation": "[0, 0, 0]",
+                      "scaling": "[9, 7, 1]"
+                    },
+                    "Component": {
+                      "active": true
+                    }
+                  }
+                }
+              ],
+              "ComponentMaterial": [
+                {
+                  "ƒ.ComponentMaterial": {
+                    "sortForAlpha": false,
+                    "clrPrimary": "[1, 1, 1, 1]",
+                    "clrSecondary": "[1, 1, 1, 1]",
+                    "pivot": {
+                      "translation": "[0, 0]",
+                      "rotation": 0,
+                      "scaling": "[9, 7]"
+                    },
+                    "Component": {
+                      "active": true
+                    },
+                    "idMaterial": "Material|2022-10-17T14:14:10.335Z|48389"
+                  }
+                }
+              ]
+            },
+            "children": []
           }
         }
       ],
@@ -89,6 +173,48 @@
         "idResource": "TextureImage|2022-10-17T14:11:05.156Z|01289",
         "name": "Images\\MarioWalk1.png",
         "mipmap": "CRISP"
+      }
+    }
+  },
+  "MeshQuad|2022-10-17T14:12:54.150Z|59894": {
+    "ƒ.MeshQuad": {
+      "idResource": "MeshQuad|2022-10-17T14:12:54.150Z|59894",
+      "name": "Background"
+    }
+  },
+  "Material|2022-10-17T14:13:09.215Z|34608": {
+    "ƒ.Material": {
+      "name": "ShaderLit",
+      "idResource": "Material|2022-10-17T14:13:09.215Z|34608",
+      "shader": "ShaderLit",
+      "coat": {
+        "ƒ.CoatColored": {
+          "color": "[1, 1, 1, 1]"
+        }
+      }
+    }
+  },
+  "TextureImage|2022-10-17T14:13:55.595Z|50044": {
+    "ƒ.TextureImage": {
+      "url": "Images\\Floor.png",
+      "type": "TextureImage",
+      "Texture": {
+        "idResource": "TextureImage|2022-10-17T14:13:55.595Z|50044",
+        "name": "Images\\Floor.png",
+        "mipmap": "CRISP"
+      }
+    }
+  },
+  "Material|2022-10-17T14:14:10.335Z|48389": {
+    "ƒ.Material": {
+      "name": "Box",
+      "idResource": "Material|2022-10-17T14:14:10.335Z|48389",
+      "shader": "ShaderLitTextured",
+      "coat": {
+        "ƒ.CoatTextured": {
+          "color": "[1, 1, 1, 1]",
+          "idTexture": "TextureImage|2022-10-17T14:13:55.595Z|50044"
+        }
       }
     }
   }
