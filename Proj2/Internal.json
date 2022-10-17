@@ -1,0 +1,95 @@
+{
+  "Graph|2022-10-17T14:09:30.697Z|12274": {
+    "ƒ.Graph": {
+      "name": "Level",
+      "active": true,
+      "components": {},
+      "children": [
+        {
+          "ƒ.Node": {
+            "name": "MarioPos",
+            "active": true,
+            "components": {},
+            "children": [
+              {
+                "ƒ.Node": {
+                  "name": "Mario",
+                  "active": true,
+                  "components": {
+                    "ComponentMesh": [
+                      {
+                        "ƒ.ComponentMesh": {
+                          "idMesh": "MeshSprite|2022-10-17T14:10:12.371Z|56297",
+                          "pivot": {
+                            "translation": "[0, 0, 0]",
+                            "rotation": "[0, 0, 0]",
+                            "scaling": "[1, 1, 1]"
+                          },
+                          "Component": {
+                            "active": true
+                          }
+                        }
+                      }
+                    ],
+                    "ComponentMaterial": [
+                      {
+                        "ƒ.ComponentMaterial": {
+                          "sortForAlpha": false,
+                          "clrPrimary": "[1, 1, 1, 1]",
+                          "clrSecondary": "[1, 1, 1, 1]",
+                          "pivot": {
+                            "translation": "[0, 0]",
+                            "rotation": 0,
+                            "scaling": "[1, 1]"
+                          },
+                          "Component": {
+                            "active": true
+                          },
+                          "idMaterial": "Material|2022-10-17T14:10:26.525Z|30563"
+                        }
+                      }
+                    ]
+                  },
+                  "children": []
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "idResource": "Graph|2022-10-17T14:09:30.697Z|12274",
+      "type": "Graph"
+    }
+  },
+  "MeshSprite|2022-10-17T14:10:12.371Z|56297": {
+    "ƒ.MeshSprite": {
+      "idResource": "MeshSprite|2022-10-17T14:10:12.371Z|56297",
+      "name": "Mario",
+      "type": "MeshSprite"
+    }
+  },
+  "Material|2022-10-17T14:10:26.525Z|30563": {
+    "ƒ.Material": {
+      "name": "ShaderLitTextured",
+      "idResource": "Material|2022-10-17T14:10:26.525Z|30563",
+      "shader": "ShaderLitTextured",
+      "coat": {
+        "ƒ.CoatTextured": {
+          "color": "[1, 1, 1, 1]",
+          "idTexture": "TextureImage|2022-10-17T14:11:05.156Z|01289"
+        }
+      }
+    }
+  },
+  "TextureImage|2022-10-17T14:11:05.156Z|01289": {
+    "ƒ.TextureImage": {
+      "url": "Images\\MarioWalk1.png",
+      "type": "TextureImage",
+      "Texture": {
+        "idResource": "TextureImage|2022-10-17T14:11:05.156Z|01289",
+        "name": "Images\\MarioWalk1.png",
+        "mipmap": "CRISP"
+      }
+    }
+  }
+}

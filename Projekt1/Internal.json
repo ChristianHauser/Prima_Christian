@@ -73,11 +73,57 @@
       "type": "Graph"
     }
   },
+  "Material|2022-10-17T13:28:59.042Z|41606": {
+    "ƒ.Material": {
+      "name": "BlueBackground",
+      "idResource": "Material|2022-10-17T13:28:59.042Z|41606",
+      "shader": "ShaderLit",
+      "coat": {
+        "ƒ.CoatColored": {
+          "color": "[1, 1, 1, 1]"
+        }
+      }
+    }
+  },
   "Graph|2022-10-11T14:16:26.385Z|55369": {
     "ƒ.Graph": {
       "name": "Level",
       "active": true,
-      "components": {},
+      "components": {
+        "ComponentMesh": [
+          {
+            "ƒ.ComponentMesh": {
+              "idMesh": "MeshCube|2022-10-17T13:56:16.406Z|33894",
+              "pivot": {
+                "translation": "[1, 1, 0]",
+                "rotation": "[0, 0, 0]",
+                "scaling": "[1, 1, 1]"
+              },
+              "Component": {
+                "active": true
+              }
+            }
+          }
+        ],
+        "ComponentMaterial": [
+          {
+            "ƒ.ComponentMaterial": {
+              "sortForAlpha": false,
+              "clrPrimary": "[1, 1, 1, 1]",
+              "clrSecondary": "[1, 1, 1, 1]",
+              "pivot": {
+                "translation": "[0, 0]",
+                "rotation": 0,
+                "scaling": "[1, 1]"
+              },
+              "Component": {
+                "active": true
+              },
+              "idMaterial": "Material|2022-10-13T09:14:27.496Z|96646"
+            }
+          }
+        ]
+      },
       "children": [
         {
           "ƒ.GraphInstance": {
@@ -434,16 +480,11 @@
       "type": "Graph"
     }
   },
-  "Material|2022-10-17T13:28:59.042Z|41606": {
-    "ƒ.Material": {
-      "name": "BlueBackground",
-      "idResource": "Material|2022-10-17T13:28:59.042Z|41606",
-      "shader": "ShaderLit",
-      "coat": {
-        "ƒ.CoatColored": {
-          "color": "[1, 1, 1, 1]"
-        }
-      }
+  "MeshCube|2022-10-17T13:56:16.406Z|33894": {
+    "ƒ.MeshCube": {
+      "idResource": "MeshCube|2022-10-17T13:56:16.406Z|33894",
+      "name": "MeshCube",
+      "type": "MeshCube"
     }
   }
 }
