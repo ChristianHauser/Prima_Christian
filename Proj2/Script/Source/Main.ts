@@ -27,6 +27,6 @@ namespace Script {
     // ƒ.Physics.simulate();  // if physics is included and used
     viewport.draw();
     ƒ.AudioManager.default.update();
-    marioMoves.getComponent(ƒ.ComponentTransform).mtxLocal.translateX(0.01);
+    marioMoves.mtxLocal.translateX(0.01);
   }
 }
