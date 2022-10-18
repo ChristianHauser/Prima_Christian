@@ -17,9 +17,9 @@ namespace Script {
     console.log(branch);
     
 
-    let mario: ƒ.Node = branch.getChildrenByName("Boxen")[0];
-    marioMoves = mario;
-    console.log(mario);
+    marioMoves = branch.getChildrenByName("MarioPos")[0];
+    
+    console.log(marioMoves);
     ƒ.Loop.start();  // start the game loop to continously draw the viewport, update the audiosystem and drive the physics i/a
   }
 
@@ -27,6 +27,6 @@ namespace Script {
     // ƒ.Physics.simulate();  // if physics is included and used
     viewport.draw();
     ƒ.AudioManager.default.update();
-    marioMoves.getComponent(ƒ.ComponentTransform).mtxLocal.translateX(1);
+    marioMoves.getComponent(ƒ.ComponentTransform).mtxLocal.translateX(0.01);
   }
 }
