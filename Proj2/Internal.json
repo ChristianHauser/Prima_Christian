@@ -72,6 +72,36 @@
       }
     }
   },
+  "MeshQuad|2022-10-18T10:53:22.931Z|39060": {
+    "ƒ.MeshQuad": {
+      "idResource": "MeshQuad|2022-10-18T10:53:22.931Z|39060",
+      "name": "Pipe"
+    }
+  },
+  "Material|2022-10-18T10:53:47.924Z|34463": {
+    "ƒ.Material": {
+      "name": "ShaderLitTextured",
+      "idResource": "Material|2022-10-18T10:53:47.924Z|34463",
+      "shader": "ShaderLitTextured",
+      "coat": {
+        "ƒ.CoatTextured": {
+          "color": "[1, 1, 1, 1]",
+          "idTexture": "TextureImage|2022-10-18T10:53:59.841Z|38324"
+        }
+      }
+    }
+  },
+  "TextureImage|2022-10-18T10:53:59.841Z|38324": {
+    "ƒ.TextureImage": {
+      "url": "Images\\Pipe.png",
+      "type": "TextureImage",
+      "Texture": {
+        "idResource": "TextureImage|2022-10-18T10:53:59.841Z|38324",
+        "name": "Images\\Pipe.png",
+        "mipmap": "CRISP"
+      }
+    }
+  },
   "Graph|2022-10-17T14:09:30.697Z|12274": {
     "ƒ.Graph": {
       "name": "Level",
@@ -250,6 +280,48 @@
                       "active": true
                     },
                     "idMaterial": "Material|2022-10-17T14:14:10.335Z|48389"
+                  }
+                }
+              ]
+            },
+            "children": []
+          }
+        },
+        {
+          "ƒ.Node": {
+            "name": "Piipe",
+            "active": true,
+            "components": {
+              "ComponentMesh": [
+                {
+                  "ƒ.ComponentMesh": {
+                    "idMesh": "MeshQuad|2022-10-18T10:53:22.931Z|39060",
+                    "pivot": {
+                      "translation": "[3, -0.09999999403953552, 0.22200003266334534]",
+                      "rotation": "[0, 0, 0]",
+                      "scaling": "[0.800000011920929, 0.800000011920929, 0.9999999403953552]"
+                    },
+                    "Component": {
+                      "active": true
+                    }
+                  }
+                }
+              ],
+              "ComponentMaterial": [
+                {
+                  "ƒ.ComponentMaterial": {
+                    "sortForAlpha": false,
+                    "clrPrimary": "[1, 1, 1, 1]",
+                    "clrSecondary": "[1, 1, 1, 1]",
+                    "pivot": {
+                      "translation": "[0, 0]",
+                      "rotation": 0,
+                      "scaling": "[1, 1]"
+                    },
+                    "Component": {
+                      "active": true
+                    },
+                    "idMaterial": "Material|2022-10-18T10:53:47.924Z|34463"
                   }
                 }
               ]

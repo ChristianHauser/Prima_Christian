@@ -1,9 +1,11 @@
 namespace Script {
   import ƒ = FudgeCore;
+  
   ƒ.Debug.info("Main Program Template running!");
 
   let viewport: ƒ.Viewport;
   let marioMoves: ƒ.Node;
+  let walkSpeed: number = 1;
   document.addEventListener("interactiveViewportStarted", <EventListener>start);
 
   function start(_event: CustomEvent): void {
@@ -27,6 +29,14 @@ namespace Script {
     // ƒ.Physics.simulate();  // if physics is included and used
     viewport.draw();
     ƒ.AudioManager.default.update();
-    marioMoves.mtxLocal.translateX(0.01);
+    if(ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.ARROW_RIGHT])){
+      marioMoves.mtxLocal.translateX(walkSpeed * ƒ.Loop.timeFrameGame/1000);
+    }
+    
+    if(ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.ARROW_LEFT])){
+      marioMoves.mtxLocal.rotateZ(180);
+      marioMoves.mtxLocal.translateY(-0.01);
+    }
+    
   }
 }
