@@ -5,32 +5,23 @@ namespace Script {
   ƒ.Debug.info("Main Program Template running!");
 
   let viewport: ƒ.Viewport;
-  let marioMoves: ƒ.Node;
-  let walkSpeed: number = 1;
+  
+  let walkSpeed: number = 1.5;
   document.addEventListener("interactiveViewportStarted", <EventListener>start);
+
+  let vecTor: ƒ.Vector3 = ƒ.Vector3.Y(180);
+
 
   function start(_event: CustomEvent): void {
     viewport = _event.detail;
     hndLoad(_event);
-    /* ƒ.Loop.addEventListener(ƒ.EVENT.LOOP_FRAME, update);
-
-    console.log(viewport);
-
-    let branch: ƒ.Node = viewport.getBranch();
-    console.log(branch);
-    
-
-    marioMoves = branch.getChildrenByName("MarioPos")[0];
-    
-    console.log(marioMoves);
-    ƒ.Loop.start();  // start the game loop to continously draw the viewport, update the audiosystem and drive the physics i/a */
   }
 
   let walkAnimation: ƒAid.SpriteSheetAnimation;
 
   function initializeAnimations(coat: ƒ.CoatTextured) {
     walkAnimation = new ƒAid.SpriteSheetAnimation("Walk", coat);
-    walkAnimation.generateByGrid(ƒ.Rectangle.GET(3, 5, 160, 170), 10, 400, ƒ.ORIGIN2D.BOTTOMCENTER, ƒ.Vector2.X(16));
+    walkAnimation.generateByGrid(ƒ.Rectangle.GET(3, 5, 110, 170), 5, 400, ƒ.ORIGIN2D.BOTTOMCENTER, ƒ.Vector2.X(140));
   }
 
   let player: ƒAid.NodeSprite;
@@ -61,23 +52,26 @@ namespace Script {
 
   function update(_event: Event): void {
     // ƒ.Physics.simulate();  // if physics is included and used
-    const amount = walkSpeed * ƒ.Loop.timeFrameGame / 1000;
+    const distance = walkSpeed * ƒ.Loop.timeFrameGame / 1000;
 
 
     ƒ.AudioManager.default.update();
+    
+    
+    player.setFrameDirection(0);
     if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.A, ƒ.KEYBOARD_CODE.ARROW_LEFT])) {
-      player.mtxLocal.translateX(-amount);
-      
-      
+      player.mtxLocal.translateX(distance);
+      player.setFrameDirection(1);
+      player.mtxLocal.rotation = ƒ.Vector3.Y(180);
       
     }
     
     else if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.D, ƒ.KEYBOARD_CODE.ARROW_RIGHT])) {
-      player.mtxLocal.translateX(amount);
-      
-      
-    
+      player.mtxLocal.translateX(distance);  
+      player.setFrameDirection(1);
+      player.mtxLocal.rotation = ƒ.Vector3.Y(0);
     }
+    
   viewport.draw();
   }
 
