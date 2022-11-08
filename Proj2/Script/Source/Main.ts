@@ -5,7 +5,7 @@ namespace Script {
   ƒ.Debug.info("Main Program Template running!");
 
   let viewport: ƒ.Viewport;
-  
+  let animJump: ƒAid.SpriteSheetAnimation;
   document.addEventListener("interactiveViewportStarted", <EventListener>start);
   function start(_event: CustomEvent): void {
     viewport = _event.detail;
@@ -17,6 +17,9 @@ namespace Script {
   function initializeAnimations(coat: ƒ.CoatTextured) {
     walkAnimation = new ƒAid.SpriteSheetAnimation("Walk", coat);
     walkAnimation.generateByGrid(ƒ.Rectangle.GET(3, 5, 110, 170), 5, 400, ƒ.ORIGIN2D.BOTTOMCENTER, ƒ.Vector2.X(140));
+    animJump = new ƒAid.SpriteSheetAnimation("Jump", coat);
+    animJump.generateByGrid(ƒ.Rectangle.GET(3, 5, 110, 170), 5, 400, ƒ.ORIGIN2D.BOTTOMCENTER, ƒ.Vector2.X(140));
+    console.log("LAUFEN");
   }
 
   let avatar: ƒAid.NodeSprite;
@@ -52,7 +55,7 @@ namespace Script {
   let gravity: number = 0.1;
 
   let leftDirection: boolean = false;
-  let prevSprint: boolean = false;
+  
 
   function update(_event: Event): void {
     let deltaTime: number = ƒ.Loop.timeFrameGame / 1000;
@@ -83,49 +86,30 @@ namespace Script {
 
     // Check for key presses
     if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.A, ƒ.KEYBOARD_CODE.ARROW_LEFT])) {
+      
       avatar.mtxLocal.translateX(-moveDistance);
       leftDirection = true;
-      if (speed < -1) {
-        if (!prevSprint) {
-          prevSprint = true;
-          //avatar.setAnimation(animSprint);
-        }
-      } else {
-        prevSprint = false;
-      }
+      
     } else if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.D, ƒ.KEYBOARD_CODE.ARROW_RIGHT])) {
       avatar.mtxLocal.translateX(moveDistance);
       leftDirection = false;
-      if (speed > 1) {
-        if (!prevSprint) {
-          prevSprint = true;
-          //avatar.setAnimation(animSprint);
-        }
-      } else {
-        prevSprint = false;
-      }
-    } else if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.W, ƒ.KEYBOARD_CODE.ARROW_UP])) {
-      //avatar.setAnimation(animLook);
       
-      avatar.showFrame(1);
-    } else if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.S, ƒ.KEYBOARD_CODE.ARROW_DOWN])) {
-      //avatar.setAnimation(animLook);
-      avatar.showFrame(0);
     } else {
-      //avatar.setAnimation(animWalk);
+      avatar.setAnimation(walkAnimation);
       avatar.showFrame(0);
     }
 
-    if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.SPACE]) && ySpeed === 0) {
+    if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.SPACE])) {
+      console.log("SPRINGEN");
       avatar.mtxLocal.translation = new ƒ.Vector3(pos.x, 0, 1);
       ySpeed = jumpForce;
     }
 
     if (ySpeed > 0) {
-      //avatar.setAnimation(animJump);
+      avatar.setAnimation(animJump);
       avatar.showFrame(0);
     } else if (ySpeed < 0) {
-      //avatar.setAnimation(animJump);
+      avatar.setAnimation(animJump);
       avatar.showFrame(1);
     }
 
