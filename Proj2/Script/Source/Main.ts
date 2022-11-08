@@ -36,7 +36,7 @@ namespace Script {
     avatar.setFrameDirection(1);
     avatar.framerate = 20;
 
-    avatar.mtxLocal.translateY(-.4);
+    avatar.mtxLocal.translateY(0);
     avatar.mtxLocal.translateX(-1);
     avatar.mtxLocal.translateZ(1.001);
 
