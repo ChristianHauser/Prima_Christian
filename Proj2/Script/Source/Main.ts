@@ -18,7 +18,7 @@ namespace Script {
     walkAnimation = new ƒAid.SpriteSheetAnimation("Walk", coat);
     walkAnimation.generateByGrid(ƒ.Rectangle.GET(3, 5, 110, 170), 5, 400, ƒ.ORIGIN2D.BOTTOMCENTER, ƒ.Vector2.X(140));
     animJump = new ƒAid.SpriteSheetAnimation("Jump", coat);
-    animJump.generateByGrid(ƒ.Rectangle.GET(3, 5, 110, 170), 5, 400, ƒ.ORIGIN2D.BOTTOMCENTER, ƒ.Vector2.X(140));
+    animJump.generateByGrid(ƒ.Rectangle.GET(3, 200, 110, 170), 5, 400, ƒ.ORIGIN2D.BOTTOMCENTER, ƒ.Vector2.X(140));
     console.log("LAUFEN");
   }
 
@@ -99,7 +99,7 @@ namespace Script {
       avatar.showFrame(0);
     }
 
-    if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.SPACE])) {
+    if (ƒ.Keyboard.isPressedOne([ƒ.KEYBOARD_CODE.SPACE])&& ySpeed === 0) {
       console.log("SPRINGEN");
       avatar.mtxLocal.translation = new ƒ.Vector3(pos.x, 0, 1);
       ySpeed = jumpForce;
