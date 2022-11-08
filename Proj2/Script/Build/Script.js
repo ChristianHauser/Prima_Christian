@@ -41,6 +41,7 @@ var Script;
     var ƒ = FudgeCore;
     var ƒAid = FudgeAid;
     ƒ.Debug.info("Main Program Template running!");
+    let sos = 0;
     let viewport;
     let animJump;
     document.addEventListener("interactiveViewportStarted", start);

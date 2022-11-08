@@ -3,7 +3,7 @@ namespace Script {
   
   import ƒAid = FudgeAid;
   ƒ.Debug.info("Main Program Template running!");
-
+  let sos: number = 0;
   let viewport: ƒ.Viewport;
   let animJump: ƒAid.SpriteSheetAnimation;
   document.addEventListener("interactiveViewportStarted", <EventListener>start);
